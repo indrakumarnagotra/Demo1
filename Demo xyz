@@ -1,0 +1,90 @@
+import java.util.Scanner;
+class Addition
+	{
+		int add(int x,int y)
+		{
+			return x+y;
+		}
+	}
+		class Substraction
+		{
+			int sub(int x,int y)
+		{
+				return x-y;
+		} 
+		}
+		class Multiplication
+		{
+			int mult(int x,int y)
+		{
+				return x*y;
+		}
+		}
+		class Division
+		{
+         float div(int x, int y)
+		{
+			 return (float) x/y;
+	    }
+
+		}
+		class ModDivision
+		{
+			int moddiv(int x, int y)
+			{
+				return x%y;
+			}
+		}
+class Demo //main calss
+{
+
+	public static void main(String[] args)
+	{
+	Scanner s=new Scanner(System.in);
+	
+		System.out.println("Enter the value:1");
+		int v1= s.nextInt();
+
+		System.out.println("Enter the value of :2");
+		int v2=s.nextInt();
+
+		System.out.println("1.add\n2.sub\n3.mult\n4.div\n5.moddiv");
+		System.out.println("Enter your choice");
+		int choice=s.nextInt();
+
+		switch(choice)
+		{
+case 1:
+				Addition ad=new Addition();
+			System.out.println("sum:"+ad.add(v1,v2));
+			break;
+
+
+case 2:
+		    Substraction st=new Substraction();
+			System.out.println("sub:"+st.sub(v1,v2));
+			break;
+
+case 3:
+	
+				Multiplication ml=new Multiplication();
+			System.out.println("Mult:"+ml.mult(v1,v2));
+			break;
+
+case 4:
+				Division dv=new Division();
+			System.out.println("Divi:"+dv.div(v1,v2));
+			break;
+
+
+case 5:
+			ModDivision md=new ModDivision();
+			System.out.println("ModDivision:"+md.moddiv(v1,v2));
+			break;
+
+			default:
+				System.out.println("======Invalid Choice====");
+
+		}
+	}
+}
